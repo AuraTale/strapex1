@@ -10,24 +10,24 @@ function Menu() {
           <div className="main_links">
             <ul>
               <li>
-                <a href="#" className="main_link">
-                  home
+                <a href="/" className="main_link">
+                  Acceuil
                 </a>
               </li>
               <li>
-                <a href="#" className="main_link">
+                <a href="/innerpages/about" className="main_link">
                   A Propos
                 </a>
               </li>
               <li>
-                <a href="#" className="main_link">
-                  cases
+                <a href="/innerpages/gallery" className="main_link">
+                  Inspiration
                 </a>
               </li>
               <li>
-                <a href="#" className="main_link">
-                  news
-                </a>
+                {/* <a href="#" className="main_link">
+                  Blogs
+                </a> */}
               </li>
               <li>
                 <a href="#" className="main_link">

@@ -22,7 +22,7 @@ function Navbar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                Home
+                Acceuil
               </a>
             </li>
             <li className="nav-item">
@@ -31,14 +31,14 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Cases
+              <a className="nav-link" href="/innerpages/gallery">
+                Inspirations
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              {/* <a className="nav-link" href="#">
                 News
-              </a>
+              </a> */}
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/innerpages/contact">
