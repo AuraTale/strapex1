@@ -1,6 +1,9 @@
 Change Log
 ==========
 
+## 3.3.2
+- Non run-time changes to licensing and distribution model
+
 ## 3.3.1
 - Insures dataset uses polyfilled `Array.from` for old IE support.
 - Fixes support for sorting via element collection. This was not correctly implemented before although documented.

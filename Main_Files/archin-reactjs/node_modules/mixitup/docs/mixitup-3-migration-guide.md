@@ -102,4 +102,4 @@ With MixItUp 3, loading animations are removed by default, and mixers are instan
 
 In short – you no longer need to set `display: none` in your CSS. Simply use whatever display value your layout would require, regardless of MixItUp.
 
-Loading animations are still possible in MixItUp 3 as demonstrated in the [Loading Animation](http://demos.kunkalabs.com/mixitup/loading-animation/) demo. The code for this demo is available [here](/demos/loading-animation/).
+Loading animations are still possible in MixItUp 3 as demonstrated in the [Loading Animation](http://patrickkunka.github.io/mixitup/demos/loading-animation/) demo. The code for this demo is available [here](../demos/loading-animation/index.html).

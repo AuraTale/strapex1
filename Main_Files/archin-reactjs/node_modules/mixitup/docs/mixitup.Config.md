@@ -61,14 +61,13 @@ var mixer = mixitup(containerEl, {
 
 
 
-A string of one or more space-seperated properties to which transitions will be
+A string of one or more space-separated properties to which transitions will be
 applied for all filtering animations.
-
+         *
 Properties can be listed any order or combination, although they will be applied in a specific
 predefined order to produce consistent results.
-
-To learn more about available effects, experiment with our <a href="https://www.kunkalabs.com/mixitup/">
-sandbox demo</a> and try out the "Export config" button in the Animation options drop down.
+         *
+To learn more about available effects, experiment by providing different animation configurations to any of our [demos](https://patrickunka.github.io/mixitup/demos).
 
 
 |Type | Default

@@ -1,17 +1,12 @@
 /**!
- * MixItUp v3.3.1
+ * MixItUp v3.3.2
  * A high-performance, dependency-free library for animated filtering, sorting and more
  * Build 94e0fbf6-cd0b-4987-b3c0-14b59b67b8a0
  *
- * @copyright Copyright 2014-2018 KunkaLabs Limited.
+ * @copyright Copyright 2014-2024 KunkaLabs Limited.
  * @author    KunkaLabs Limited.
- * @link      https://www.kunkalabs.com/mixitup/
- *
- * @license   Commercial use requires a commercial license.
- *            https://www.kunkalabs.com/mixitup/licenses/
- *
- *            Non-commercial use permitted under same terms as CC BY-NC 3.0 license.
- *            http://creativecommons.org/licenses/by-nc/3.0/
+ * @link      https://github.com/patrickkunka/mixitup
+ * @license   Apache-2.0
  */
 
 (function(window) {
@@ -1791,14 +1786,13 @@
         this.enable = true;
 
         /**
-         * A string of one or more space-seperated properties to which transitions will be
+         * A string of one or more space-separated properties to which transitions will be
          * applied for all filtering animations.
          *
          * Properties can be listed any order or combination, although they will be applied in a specific
          * predefined order to produce consistent results.
          *
-         * To learn more about available effects, experiment with our <a href="https://www.kunkalabs.com/mixitup/">
-         * sandbox demo</a> and try out the "Export config" button in the Animation options drop down.
+         * To learn more about available effects, experiment by providing different animation configurations to any of our [demos](https://patrickunka.github.io/mixitup/demos).
          *
          * @example <caption>Example: Apply "fade" and "translateZ" effects to all animations</caption>
          * // As targets are filtered in and out, they will fade between
@@ -10678,5 +10672,5 @@
     mixitup.BaseStatic.call(mixitup.constructor);
 
     mixitup.NAME = 'mixitup';
-    mixitup.CORE_VERSION = '3.3.1';
+    mixitup.CORE_VERSION = '3.3.2';
 })(window);

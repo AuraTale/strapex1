@@ -1,3 +1,30 @@
+# 📣 November 2024 Update 📣
+
+### Changes to License Model
+
+As MixItUp turns 10 years old (and having remained unchanged since ~2018) it will be moving to a **fully open source** and publicly available model. This means that from 1st November 2024, you no longer need to purchase a license for commercial use.
+
+Additionally, the MixItUp project and its extensions will become **fully archived** meaning that no future changes will be made. MixItUp has been stable for many years and remains in use across tens of thousands of web sites and applications worldwide. If you wish to use it on a brand-new project and it meets your needs, then you should feel confident in doing so.
+
+### Pagination and MultiFilter Extensions
+
+The Pagination and MultiFilter extensions, which were previously closed source and only available via purchase, have also been been made publicly available on GitHub, and may now be used without purchase or a commercial license.
+
+- [www.github.com/patrickkunka/mixitup-pagination](https://www.github.com/patrickkunka/mixitup-pagination)
+- [www.github.com/patrickkunka/mixitup-multifilter](https://www.github.com/patrickkunka/mixitup-multifilter)
+
+### Documentation Website
+
+The documentation website has been retired in favor of GitHub. All documentation and tutorials are available via this GitHub repository, or the repository of the relevant extension (see above).
+
+### Demos
+
+Hosted interactive demos may be found at [patrickkunka.github.io/mixitup/demos](https://patrickkunka.github.io/mixitup/demos). The documented source code of each demo can be found in the [/demos](./demos/) directory if this repository.
+
+Demos for the Pagination and MultiFilter extensions can be found linked to in their respective repositories.
+
+---
+
 # MixItUp 3
 
 [![Build Status](https://travis-ci.org/patrickkunka/mixitup.svg?branch=v3)](https://travis-ci.org/patrickkunka/mixitup)
@@ -8,13 +35,11 @@ MixItUp is a high-performance, dependency-free library for animated DOM manipula
 
 MixItUp plays nice with your existing HTML and CSS, making it a great choice for responsive layouts and compatible with inline-flow, percentages, media queries, flexbox and more.
 
-For a live sandbox, full documentation, tutorials and more, please visit [kunkalabs.com/mixitup](https://www.kunkalabs.com/mixitup/).
-
 Migrating from MixItUp 2? Check out the [MixItUp 3 Migration Guide](./docs/mixitup-3-migration-guide.md).
 
 #### Licensing
 
-MixItUp is open source and free to use for non-commercial, educational and non-profit use. For use in commercial projects, **a commercial license is required**. For licensing information and FAQs please see the [MixItUp Licenses](https://www.kunkalabs.com/mixitup/licenses/) page.
+MixItUp is open source and free to use for all use cases, under the Apache 2.0 license.
 
 #### Documentation
 
@@ -23,6 +48,36 @@ MixItUp is open source and free to use for non-commercial, educational and non-p
 - [Mixer API Methods](./docs/mixitup.Mixer.md)
 - [State Object](./docs/mixitup.State.md)
 - [Mixer Events](./docs/mixitup.Events.md)
+
+#### Tutorials
+
+##### [Integrating MixItUp into Your Project](./tutorials/integrating-mixitup-into-your-project.md)
+
+MixItUp can be used with static sites, CMSs, web apps and more. This tutorial will help you choose the right integration for your project.
+
+##### [Filtering with MixItUp](./tutorials/filtering-with-mixitup.md)
+
+A summary of the various filtering techniques available in MixItUp – filter/toggle controls, multidimensional filtering, and the filter API.
+
+##### [Sorting with MixItUp](./tutorials/sorting-with-mixitup.md)
+
+A summary of the various sorting techniques available in MixItUp – default sort, attribute sort, multi-attribute sort, and the sort API.
+
+##### [MixItUp Grid Layouts](./tutorials/mixitup-grid-layouts.md)
+
+A summary of the three most common approaches to responsive grids – inline-block, flex-box, and floats – in the context of MixItUp.
+
+##### [Marking Up MixItUp Containers](./tutorials/marking-up-mixitup-containers.md)
+
+This tutorial explores various container markup structures, and explains what is and isn't possible with MixItUp.
+
+##### [Filtering and Sorting on Load](./tutorials/filtering-and-sorting-on-load.md)
+
+A look at how we can use the configuration object to load MixItUp in a state other than its default filtering and sorting behavior.
+
+##### [Using the Dataset API](./tutorials/using-the-dataset-api.md)
+
+New to MixItUp 3, the Dataset API allows interaction with MixItUp purely via changes to a data model, avoiding the use of DOM selectors.
 
 #### Browser Support
 
@@ -65,7 +120,7 @@ By default, MixItUp will query the container for targets matching the selector `
 
 Targets can be filtered using any valid selector e.g. `'.category-a'`, and are sorted via optional custom data attributes e.g. `'data-order'`.
 
-Further reading: [Marking-up MixItUp Containers](https://www.kunkalabs.com/tutorials/marking-up-mixitup-containers/)
+Further reading: [Marking-up MixItUp Containers](./tutorials/marking-up-mixitup-containers.md)
 
 ### Building Controls
 
@@ -82,7 +137,7 @@ Filter controls are queried based on the presence of a `data-filter` attribute, 
 <button type="button" data-filter=".category-c">Category C</button>
 ```
 
-Further reading: [Filtering with MixItUp](https://www.kunkalabs.com/tutorials/filtering-with-mixitup/)
+Further reading: [Filtering with MixItUp](./tutorials/filtering-with-mixitup.md)
 
 #### Sort Controls
 
@@ -96,13 +151,13 @@ Sort controls are queried based on the presence of a `data-sort` attribute, whos
 
 The values `'default'` and `'random'` are also valid, with `'default'` referring to the original order of target elements in the DOM at the time of mixer instantiation.
 
-Further reading: [Sorting with MixItUp](https://www.kunkalabs.com/tutorials/sorting-with-mixitup/)
+Further reading: [Sorting with MixItUp](./tutorials/sorting-with-mixitup.md)
 
 ### Styling the Container
 
 While MixItUp can be added on top of any existing CSS layout, we strongly recommend inline-block or flexbox-based styling over floats and legacy grid frameworks when dealing with grid-based designs for a number of reasons.
 
-Further reading: [MixItUp Grid Layouts](https://www.kunkalabs.com/tutorials/mixitup-grid-layouts/)
+Further reading: [MixItUp Grid Layouts](./tutorials/mixitup-grid-layouts.md)
 
 ### Loading MixItUp
 
@@ -205,4 +260,4 @@ Further reading: [Mixer API Methods](./docs/mixitup.Mixer.md)
 
 You may wish to use MixItUp 3's new "dataset" API. Dataset is designed for use in API-driven JavaScript applications, and can be used instead of DOM-based methods such as `.filter()`, `.sort()`, `.insert()`, etc. When used, insertion, removal, sorting and pagination can be achieved purely via changes to your data model, without the uglyness of having to interact with or query the DOM directly.
 
-Further reading: [Using the Dataset API](https://www.kunkalabs.com/tutorials/using-the-dataset-api/)
+Further reading: [Using the Dataset API](./tutorials/using-the-dataset-api.md)
