@@ -6,7 +6,7 @@ function Services() {
       <div className="content section-padding section-padding-x">
         <div className="container">
           <div className="title mb-80 text-center">
-            <p className="color-666 text-uppercase wow"> our services </p>
+            <p className="color-666 text-uppercase wow"> Nos services </p>
           </div>
           <div className="services">
             <div className="row">
@@ -19,7 +19,7 @@ function Services() {
                   <div className="icon">
                     <i className="la la-hard-hat"></i>
                   </div>
-                  <h5 className="fsz-24 mb-20"> Architecture & Building </h5>
+                  <h5 className="fsz-24 mb-20"> Architecture & Construction </h5>
                   <div className="img">
                     <img
                       src="/innerpages/assets/img/services/ser1.jpg"
@@ -28,12 +28,9 @@ function Services() {
                     />
                   </div>
                   <div className="text color-666 mt-50">
-                    Planning, 3D Vissuallization, Landscape Design, Structural
-                    Drawing, CGI, Construction Supervision
+                    Planification, Visualisation 3D, Conception paysagère, Dessin structurel,
+                    CGI, Supervision de construction
                   </div>
-                  <span className="arrow">
-                    <i className="ti-arrow-top-right"></i>
-                  </span>
                 </a>
               </div>
               <div className="col-lg-3">
@@ -47,7 +44,7 @@ function Services() {
                   </div>
                   <h5 className="fsz-24 mb-20">
                     {' '}
-                    Interior and Exterior Design{' '}
+                    Design Intérieur et Extérieur{' '}
                   </h5>
                   <div className="img">
                     <img
@@ -57,12 +54,9 @@ function Services() {
                     />
                   </div>
                   <div className="text color-666 mt-50">
-                    Interior Design, Exterior Design, Rennovation, Sustainable
-                    Design, Installation, Plumbing System, 3D Experience
+                    Design d'intérieur, Design d'extérieur, Rénovation, Design durable,
+                    Installation, Système de plomberie, Expérience 3D
                   </div>
-                  <span className="arrow">
-                    <i className="ti-arrow-top-right"></i>
-                  </span>
                 </a>
               </div>
               <div className="col-lg-3">
@@ -74,7 +68,7 @@ function Services() {
                   <div className="icon">
                     <i className="la la-bed"></i>
                   </div>
-                  <h5 className="fsz-24 mb-20"> Furniture Productions </h5>
+                  <h5 className="fsz-24 mb-20"> Production de Mobilier </h5>
                   <div className="img">
                     <img
                       src="/innerpages/assets/img/services/ser3.jpg"
@@ -83,12 +77,9 @@ function Services() {
                     />
                   </div>
                   <div className="text color-666 mt-50">
-                    Bespoke Furniture, Material Supply, Online Store,
-                    Distribute, 3D Modeling
+                    Mobilier sur mesure, Fourniture de matériaux, Boutique en ligne,
+                    Distribution, Modélisation 3D
                   </div>
-                  <span className="arrow">
-                    <i className="ti-arrow-top-right"></i>
-                  </span>
                 </a>
               </div>
               <div className="col-lg-3">
@@ -101,7 +92,7 @@ function Services() {
                     <i className="la la-comments"></i>
                   </div>
                   <h5 className="fsz-24 mb-20">
-                    Project Consulting & Supervisor
+                    Conseil de Projet & Supervision
                   </h5>
                   <div className="img">
                     <img
@@ -111,11 +102,8 @@ function Services() {
                     />
                   </div>
                   <div className="text color-666 mt-50">
-                    Project Analysis, Bid Documentation, Construction Supervisor
+                    Analyse de projet, Documentation d'appel d'offres, Supervision de construction
                   </div>
-                  <span className="arrow">
-                    <i className="ti-arrow-top-right"></i>
-                  </span>
                 </a>
               </div>
             </div>
@@ -126,7 +114,7 @@ function Services() {
               className="butn rounded-pill mt-80 hover-bg-black bg-orange1 text-white"
             >
               <span>
-                Get A Free Quote Now
+                Obtenez un devis gratuit maintenant
                 <i className="small ms-1 ti-arrow-top-right"></i>
               </span>
             </a>

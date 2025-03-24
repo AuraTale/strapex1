@@ -5,9 +5,9 @@ function Process() {
     <section className="tc-process-style2">
       <div className="container">
         <h2 className="fsz-45 fw-500 mb-80 text-center">
-          Our Approach
+          Notre Approche
           <span className="sub-font fst-italic color-orange1 fw-400">
-            process
+            processus
           </span>
         </h2>
         <div className="content">
@@ -33,11 +33,10 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                          Fondée avec passion et expertise, Strapex Maroc s'est établie comme 
+                          un leader dans le domaine des matériaux de construction et de décoration. 
+                          Notre parcours est marqué par un engagement constant envers l'excellence 
+                          et l'innovation dans tous nos produits et services.
                         </div>
                       </div>
                     </div>
@@ -60,11 +59,10 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                          Nous aspirons à transformer les espaces de vie au Maroc en alliant 
+                          esthétique et fonctionnalité. Notre vision est de devenir la référence 
+                          incontournable pour tous les projets de construction et de rénovation, 
+                          en proposant des solutions innovantes et durables.
                         </div>
                       </div>
                     </div>
@@ -87,11 +85,10 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                          Notre mission est d'offrir des produits de haute qualité et un service 
+                          client exceptionnel. Nous nous engageons à comprendre les besoins uniques 
+                          de chaque client et à leur fournir des solutions personnalisées qui 
+                          dépassent leurs attentes.
                         </div>
                       </div>
                     </div>
@@ -114,11 +111,11 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                          Chez Strapex Maroc, nous croyons en la responsabilité sociale. 
+                          Nous soutenons activement des initiatives locales et nous nous 
+                          engageons à adopter des pratiques commerciales durables qui 
+                          respectent l'environnement et contribuent positivement à la 
+                          communauté marocaine.
                         </div>
                       </div>
                     </div>

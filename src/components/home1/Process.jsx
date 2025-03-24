@@ -34,11 +34,11 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                          Après l'étude et l'obtention des informations nécessaires, 
+                          nous créerons une conception préliminaire comprenant des dessins 
+                          techniques, des images 3D de l'intérieur et fournirons une 
+                          expérience 3D VR pour aider les clients à obtenir une 
+                          visualisation de leur projet.
                         </div>
                       </div>
                     </div>
@@ -62,11 +62,11 @@ function Process() {
                     >
                       <div className="accordion-body">
                         <div className="text">
-                          After surveying and obtaining the necessary
-                          information, we will create a preliminary design
-                          including technical drawings, 3D images of the
-                          interior and provide a 3D VR experience to help
-                          customers get a visual view of their project.
+                          Après l'étude et l'obtention des informations nécessaires, 
+                          nous créerons une conception préliminaire comprenant des dessins 
+                          techniques, des images 3D de l'intérieur et fournirons une 
+                          expérience 3D VR pour aider les clients à obtenir une 
+                          visualisation de leur projet.
                         </div>
                       </div>
                     </div>
@@ -104,7 +104,7 @@ function Process() {
                   className="butn border rounded-pill mt-80 color-orange1 border-orange1 hover-bg-orange1"
                 >
                   <span>
-                    Our Projects
+                    Nos Projets
                     <i className="small ms-1 ti-arrow-top-right"></i>
                   </span>
                 </a>
