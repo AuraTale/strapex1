@@ -39,10 +39,10 @@ function Footer() {
                     <a href="#">Km9, Route de Mediouna Lot N°2, Casablanca – Maroc</a>
                   </li>
                   <li>
-                    <a href="#"> contact@strapexmaroc.com </a>
+                    <a href="/contact"> contact@strapexmaroc.com </a>
                   </li>
                   <li>
-                    <a href="#"> +212 667 79 90 66 </a>
+                    <a href="/contact"> +212 667 79 90 66 </a>
                   </li>
                 </ul>
               </div>

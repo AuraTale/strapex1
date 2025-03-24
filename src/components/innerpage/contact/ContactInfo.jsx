@@ -16,10 +16,10 @@ function ContactInfo() {
                         <a href="#"> Km9, Route de Mediouna Lot N°2, Casablanca – Maroc </a>
                       </li>
                       <li>
-                        <a href="#"> Contact@strapexmaroc.com </a>
+                        <a href="/contact"> Contact@strapexmaroc.com </a>
                       </li>
                       <li>
-                        <a href="#"> +212 667 79 90 66 </a>
+                        <a href="/contact"> +212 667 79 90 66 </a>
                       </li>
                     </ul>
                   </div>
@@ -32,10 +32,10 @@ function ContactInfo() {
                         <a href="#">49, Avenue Al Farabi Z.I. Tassila, Agadir – Maroc</a>
                       </li>
                       <li>
-                        <a href="#"> Contact@strapemaroc.com </a>
+                        <a href="/contact"> Contact@strapexmaroc.com </a>
                       </li>
                       <li>
-                        <a href="#"> +212 667 79 90 66 </a>
+                        <a href="/contact"> +212 667 79 90 66 </a>
                       </li>
                     </ul>
                   </div>

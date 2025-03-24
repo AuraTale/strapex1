@@ -42,10 +42,10 @@ function Experience() {
             <div className="rotate-txt justify-content-lg-end">
               <ul>
                 <li>
-                  <a href="#"> Contact@strapexmaroc.com </a>
+                  <a href="/contact"> Contact@strapexmaroc.com </a>
                 </li>
                 <li>
-                  <a href="#"> 05 00 00 00 00</a>
+                  <a href="/contact"> 05 00 00 00 00</a>
                 </li>
               </ul>
             </div>
