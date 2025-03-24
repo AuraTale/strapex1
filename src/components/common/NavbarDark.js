@@ -15,9 +15,19 @@ function NavbarDark() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Function to handle home link click
+  const handleHomeClick = (e) => {
+    // Only if we're not already on the home page
+    if (location.pathname !== '/') {
+      e.preventDefault();
+      // Use window.location.href to force a full page reload
+      window.location.href = '/';
+    }
+  };
+
   return (
     <nav className={`navbar navbar-expand-lg navbar-dark tc-navbar-style1 section-padding-x ${
-      isScrolled ? 'bg-transparent nav-scrolled' : 'bg-dark'
+      isScrolled ? 'bg-transparent nav-scrolled' : 'bg-transparent'
     }`}>
       <div className="container-fluid content">
         <Link className="navbar-brand" to="/">
@@ -37,12 +47,13 @@ function NavbarDark() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link 
+              <a 
                 className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
-                to="/"
+                href="/"
+                onClick={handleHomeClick}
               >
                 Acceuil
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
               <Link 

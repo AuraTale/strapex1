@@ -6,13 +6,15 @@
   top: 0;
   z-index: 1000;
   padding: 1.5rem 0;
-  background: linear-gradient(to right, #1a1a1a, #333333) !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  background: transparent !important; /* Ensure transparency */
+  box-shadow: none; /* Remove shadow for complete transparency */
 }
 
 .navbar.nav-scrolled {
   padding: 1rem 0;
-  background: rgba(26, 26, 26, 0.98) !important;
+  background: rgba(26, 26, 26, 0.6) !important; /* Semi-transparent when scrolled */
+  backdrop-filter: blur(10px); /* Add blur effect when scrolled */
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Improved spacing between navbar items */
@@ -85,7 +87,9 @@
   }
 
   .navbar-collapse {
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 1.25rem;
     margin: 0.5rem -1rem;
     border-radius: 8px;
@@ -136,26 +140,73 @@ footer .copy-right {
   opacity: 0.8;
 }
 
-/* About page specific navbar styles */
+/* About page specific navbar styles - white text */
 .about-pg-style1 .navbar {
-  background-color: #000000 !important;  /* Force black background */
+  background-color: transparent !important;
 }
 
 .about-pg-style1 .navbar .nav-link {
-  color: #ffffff !important;  /* Force white text */
+  color: #ffffff !important;  /* White text for about page */
 }
 
 .about-pg-style1 .navbar .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8) !important;  /* Slightly transparent on hover */
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Gallery and Contact page specific navbar styles - black text */
+.portfolio-pg-style1 .navbar,
+.contact-pg-style1 .navbar {
+  background-color: transparent !important;
+}
+
+.portfolio-pg-style1 .navbar .nav-link,
+.contact-pg-style1 .navbar .nav-link {
+  color: #000000 !important;  /* Black text for gallery and contact pages */
+}
+
+.portfolio-pg-style1 .navbar .nav-link:hover,
+.contact-pg-style1 .navbar .nav-link:hover {
+  color: rgba(0, 0, 0, 0.7) !important;  /* Slightly transparent black on hover */
+}
+
+.portfolio-pg-style1 .navbar .nav-link.active,
+.contact-pg-style1 .navbar .nav-link.active {
+  color: #e8c48f !important;  /* Keep active color as gold */
 }
 
 /* Mobile styles */
 @media (max-width: 991.98px) {
+  /* About page mobile menu - dark background with white text */
   .about-pg-style1 .navbar-collapse {
-    background-color: #000000;  /* Black background for mobile menu */
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
-
+  
   .about-pg-style1 .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5);  /* White border for mobile toggle */
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Gallery and Contact page mobile menu - light background with dark text */
+  .portfolio-pg-style1 .navbar-collapse,
+  .contact-pg-style1 .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .portfolio-pg-style1 .navbar-toggler,
+  .contact-pg-style1 .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .portfolio-pg-style1 .navbar .nav-link,
+  .contact-pg-style1 .navbar .nav-link {
+    color: #000000 !important;
+  }
+  
+  .portfolio-pg-style1 .navbar-toggler-icon,
+  .contact-pg-style1 .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
   }
 } 
