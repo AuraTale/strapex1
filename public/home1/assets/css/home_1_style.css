@@ -1250,3 +1250,32 @@ html[lang=ar] .home-style1 .tc-chat-style1 .c-line {
 html[lang=ar] .home-style1 .loader-wrap {
   direction: ltr;
 }
+
+/* Fix cursor disappearing in sliders */
+.swiper-container .swiper-pagination-bullet,
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev,
+.slider-navs .swiper-pagination-bullet,
+.slider-controls .swiper-button-next,
+.slider-controls .swiper-button-prev,
+.nouveautes-slider .swiper-pagination-bullet {
+  cursor: pointer !important; /* Force pointer cursor */
+}
+
+/* Remove any cursor: none rules */
+[class*="swiper-"]:hover,
+.swiper-wrapper:hover,
+.swiper-slide:hover,
+.swiper-pagination:hover,
+.swiper-pagination-bullet:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  cursor: pointer !important;
+}
+
+/* Ensure navigation elements always show pointer cursor */
+.slider-nav-item,
+.swiper-pagination-bullet,
+.nouveautes-section .swiper-pagination-bullet {
+  cursor: pointer !important;
+}

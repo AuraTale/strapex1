@@ -9,7 +9,7 @@ function Chat() {
             Contact@strapexmaroc.com
           </a>
           <h5 className="mb-50 lh-5">
-          Faisons de votre rêve <br /> une réalité
+          Faisons de votre rêve une réalité
           </h5>
         </div>
       </div>

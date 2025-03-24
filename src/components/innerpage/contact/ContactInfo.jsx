@@ -43,25 +43,6 @@ function ContactInfo() {
               </div>
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="social-icons mt-50 text-lg-end">
-              <a href="#">
-                <i className="fab fa-x-twitter"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

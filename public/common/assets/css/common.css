@@ -1,0 +1,158 @@
+/* Contact Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form .submit-btn {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #333;
+}
+
+/* Dark mode styles */
+.contact-form.dark-mode input,
+.contact-form.dark-mode textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.contact-form.dark-mode input::placeholder,
+.contact-form.dark-mode textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form.dark-mode .submit-btn {
+  background-color: white;
+  color: #1a1a1a;
+}
+
+.contact-form.dark-mode .submit-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Loader animation styles */
+.loading-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Start visible */
+  transition: opacity 0.5s ease-out;
+}
+
+.loading-fade-out {
+  opacity: 0;
+}
+
+.loading-hidden {
+  display: none;
+}
+
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-svg {
+  animation: rotate 2s linear infinite;
+  width: 50px;
+  height: 50px;
+}
+
+.loader-circle {
+  stroke: #e8c48f;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dashoffset: -125;
+  }
+}
+
+.content-hidden {
+  visibility: hidden;
+}
+
+/* Add smooth scroll styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+#scrollsmoother-container {
+  width: 100%;
+  height: 100%;
+}
+
+.smooth-scroll-content {
+  width: 100%;
+} 

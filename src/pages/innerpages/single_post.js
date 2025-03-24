@@ -1,17 +1,17 @@
 import React from 'react';
-import Loader from '../../components/common/Loader';
-import Footer from '../../components/innerpage/Footer';
-import Menu from '../../components/innerpage/Menu';
-import Navbar2 from '../../components/innerpage/Navbar2';
-import StartButton from '../../components/common/StartButton';
+import PageLayout from '../../components/layout/PageLayout';
 import Slider from '../../components/innerpage/single_post/Slider';
 import Content from '../../components/innerpage/single_post/Content';
 import Comments from '../../components/innerpage/single_post/Comments';
+import Footer from '../../components/innerpage/Footer';
 import { Helmet } from 'react-helmet';
 
 function SinglePost() {
   return (
-    <>
+    <PageLayout
+      pageTitle="Groupe Strapex Maroc"
+      className="inner-pages-style1 post-pg-style1"
+    >
       <Helmet>
         <link
           rel="stylesheet"
@@ -21,21 +21,13 @@ function SinglePost() {
         <script src="/common/assets/js/common_js.js"></script>
         <script src="/innerpages/assets/js/innerpages.js"></script>
       </Helmet>
-      <body className="inner-pages-style1 post-pg-style1">
-        <Loader />
-        <Menu />
-        <div className="smooth-scroll-content" id="scrollsmoother-container">
-          <Navbar2 />
-          <main>
-            <Slider />
-            <Content />
-            <Comments />
-          </main>
-          <Footer />
-        </div>
-        <StartButton />
-      </body>
-    </>
+      <main>
+        <Slider />
+        <Content />
+        <Comments />
+      </main>
+      <Footer />
+    </PageLayout>
   );
 }
 

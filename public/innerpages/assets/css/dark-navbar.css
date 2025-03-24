@@ -1,0 +1,161 @@
+/* Clean, modern navbar styling */
+.navbar {
+  transition: all 0.4s ease-in-out;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  background: linear-gradient(to right, #1a1a1a, #333333) !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.nav-scrolled {
+  padding: 1rem 0;
+  background: rgba(26, 26, 26, 0.98) !important;
+}
+
+/* Improved spacing between navbar items */
+.navbar .nav-item {
+  margin: 0 1.25rem;  /* Increased horizontal spacing */
+}
+
+/* Refined navbar link styling */
+.navbar .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Elegant underline effect */
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e8c48f; /* Warm gold accent color */
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link.active {
+  color: #e8c48f !important; /* Warm gold for active item */
+  font-weight: 600;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-brand img {
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.nav-scrolled .navbar-brand img {
+  height: 40px;
+}
+
+/* Masquer l'icône de menu sur bureau */
+@media (min-width: 992px) {
+  .nav-side .icon.side_menu_btn {
+    display: none;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .navbar-collapse {
+    background: #1a1a1a;
+    padding: 1.25rem;
+    margin: 0.5rem -1rem;
+    border-radius: 8px;
+  }
+
+  .navbar .nav-item {
+    margin: 0.75rem 0;
+  }
+
+  .navbar .nav-link {
+    padding: 0.75rem 1rem !important;
+    border-radius: 4px;
+  }
+
+  .navbar .nav-link::after {
+    display: none;
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active {
+    background-color: rgba(232, 196, 143, 0.1); /* Subtle gold background */
+    color: #e8c48f !important;
+  }
+
+  .navbar-toggler {
+    border-color: rgba(232, 196, 143, 0.5);
+  }
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+  padding-top: 90px;
+}
+
+/* Footer specific styles */
+footer.navbar-expand-lg {
+  margin-top: 4rem;
+  padding: 3rem 0;
+  background-color: #1a1a1a !important;
+}
+
+footer .nav-link {
+  padding: 0.5rem 1rem !important;
+}
+
+footer .copy-right {
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+/* About page specific navbar styles */
+.about-pg-style1 .navbar {
+  background-color: #000000 !important;  /* Force black background */
+}
+
+.about-pg-style1 .navbar .nav-link {
+  color: #ffffff !important;  /* Force white text */
+}
+
+.about-pg-style1 .navbar .nav-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;  /* Slightly transparent on hover */
+}
+
+/* Mobile styles */
+@media (max-width: 991.98px) {
+  .about-pg-style1 .navbar-collapse {
+    background-color: #000000;  /* Black background for mobile menu */
+  }
+
+  .about-pg-style1 .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);  /* White border for mobile toggle */
+  }
+} 

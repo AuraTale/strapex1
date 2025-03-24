@@ -1,6 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 function ContactForm() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Replace these with your actual EmailJS service, template, and user IDs
+    const serviceId = 'service_qgzhgos';
+    const templateId = 'strapex111';
+    const userId = 'bt9L2gglORx8Ht84f';
+
+    // Create template parameters object with the correct field name for email
+    const templateParams = {
+      from_name: formData.fullName,
+      from_email: formData.email, // Make sure this matches the template parameter name
+      email: formData.email, // Include both formats to ensure compatibility
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSubmitStatus('success');
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        setSubmitStatus('error');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+  };
+
   return (
     <section className="tc-contact-form-style1">
       <div className="container">
@@ -8,96 +68,132 @@ function ContactForm() {
           <div className="col-lg-4">
             <div className="info wow fadeInUp slow" data-wow-delay="0.2s">
               <h3 className="fsz-45 fw-500 mb-80">
-              Faisons de votre rêve une réalité
+                Faisons de votre rêve une réalité
               </h3>
               <p className="fsz-14 color-666 mt-15">
-                Your email address will not be published. <br /> Required fields
-                are marked <span className="text-danger"> * </span>
+                Votre adresse e-mail ne sera pas publiée. <br /> Les champs obligatoires
+                sont marqués <span className="text-danger"> * </span>
               </p>
             </div>
           </div>
           <div className="col-lg-6">
             <form
-              action=""
+              onSubmit={handleSubmit}
               className="form mt-5 mt-lg-0 wow fadeInUp slow"
               data-wow-delay="0.4s"
             >
+              {submitStatus === 'success' && (
+                <div className="alert alert-success mb-4">
+                  Votre message a été envoyé avec succès!
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="alert alert-danger mb-4">
+                  Une erreur s'est produite. Veuillez réessayer plus tard.
+                </div>
+              )}
               <div className="row">
                 <div className="col-lg-6">
                   <div className="form-group mb-30">
-                    <label htmlFor="">
-                    Nom complet <span className="color-orange1"> * </span>
+                    <label htmlFor="fullName">
+                      Nom complet <span className="color-orange1"> * </span>
                     </label>
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="your name"
+                      placeholder="votre nom"
+                      name="fullName"
+                      id="fullName"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="form-group mb-30">
-                    <label htmlFor="">
-                      address email <span className="color-orange1">*</span>
+                    <label htmlFor="email">
+                      adresse email <span className="color-orange1">*</span>
                     </label>
                     <input
-                      type="text"
+                      type="email"
                       className="form-control"
-                      placeholder="Your email address"
+                      placeholder="Votre adresse email"
+                      name="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="form-group mb-30">
-                    <label htmlFor="">
-                      Telephone <span className="color-999"> (optional) </span>
+                    <label htmlFor="phone">
+                      Téléphone <span className="color-999"> (optionnel) </span>
                     </label>
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Your phone number"
+                      placeholder="Votre numéro de téléphone"
+                      name="phone"
+                      id="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="form-group mb-30">
-                    <label htmlFor="">
-                      subject <span className="color-orange1"> * </span>
+                    <label htmlFor="subject">
+                      sujet <span className="color-orange1"> * </span>
                     </label>
-                    <select name="" id="" className="form-select form-control">
+                    <select 
+                      name="subject" 
+                      id="subject" 
+                      className="form-select form-control"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                    >
                       <option value=""> Sélectionnez un sujet </option>
-                      <option value=""> Demande de devis </option>
-                      <option value=""> Demande d’information </option>
-                      <option value=""> Réclamation </option>
-                      <option value=""> Collaboration & Partenariat </option>
-                      <option value=""> Service après-vente </option>
+                      <option value="Demande de devis"> Demande de devis </option>
+                      <option value="Demande d'information"> Demande d'information </option>
+                      <option value="Réclamation"> Réclamation </option>
+                      <option value="Collaboration & Partenariat"> Collaboration & Partenariat </option>
+                      <option value="Service après-vente"> Service après-vente </option>
                     </select>
                   </div>
                 </div>
                 <div className="col-lg-12">
                   <div className="form-group mb-30">
-                    <label htmlFor=""> message </label>
+                    <label htmlFor="message"> message </label>
                     <textarea
                       rows="6"
-                      placeholder="Write your message here"
+                      placeholder="Écrivez votre message ici"
                       className="form-control"
+                      name="message"
+                      id="message"
+                      value={formData.message}
+                      onChange={handleChange}
                     ></textarea>
                   </div>
                 </div>
               </div>
-              <a
-                href="#"
+              <button
+                type="submit"
                 className="butn hover-bg-orange1 text-capitalize bg-white rounded-pill mt-40"
+                disabled={isSubmitting}
               >
                 <span>
-                Envoyez votre message
+                  {isSubmitting ? 'Envoi en cours...' : 'Envoyez votre message'}
                   <i className="fal fa-arrow-up-right ms-2"></i>
                 </span>
-              </a>
+              </button>
               <p className="fsz-12 color-666 mt-20">
-                By summiting, i’m agree to the
+                En soumettant, j'accepte les
                 <a href="#" className="color-000 text-decoration-underline">
-                  Terms & Conditions
+                  {' '}Conditions Générales
                 </a>
               </p>
             </form>

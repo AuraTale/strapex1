@@ -1,44 +1,28 @@
 import React from 'react';
-import Loader from '../../components/common/Loader';
-import Footer from '../../components/innerpage/Footer';
-import Menu from '../../components/innerpage/Menu';
-import Navbar2 from '../../components/innerpage/Navbar2';
-import StartButton from '../../components/common/StartButton';
+import PageLayout from '../../components/layout/PageLayout';
+import Menu from '../../components/home1/Menu';
 import Header from '../../components/innerpage/contact/Header';
 import ContactInfo from '../../components/innerpage/contact/ContactInfo';
 import Map from '../../components/innerpage/contact/Map';
 import ContactForm from '../../components/innerpage/contact/ContactForm';
-import { Helmet } from 'react-helmet';
+import Footer from '../../components/innerpage/Footer';
 
 function ContactPage() {
   return (
-    <>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="/innerpages/assets/css/innerpages.css"
-        />
-        <script src="/common/assets/js/common_js.js"></script>
-        <script src="/innerpages/assets/js/innerpages.js"></script>
-      </Helmet>
-      <body className="inner-pages-style1 contact-pg-style1">
-        <Loader />
-        <Menu />
-        <div className="smooth-scroll-content" id="scrollsmoother-container">
-          <Navbar2 />
-          <Header />
-
-          <main>
-            <ContactInfo />
-            <Map />
-            <ContactForm />
-          </main>
-          <Footer />
-        </div>
-        <StartButton />
-      </body>
-    </>
+    <PageLayout
+      pageTitle="Groupe Strapex Maroc"
+      className="inner-pages-style1 contact-pg-style1"
+      darkNavbar
+    >
+      <Menu />
+      <Header />
+      <main>
+        {/* <ContactInfo /> */}
+        <Map />
+        <ContactForm />
+      </main>
+      <Footer />
+    </PageLayout>
   );
 }
 
